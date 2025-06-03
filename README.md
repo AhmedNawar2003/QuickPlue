@@ -81,7 +81,7 @@ src/
 
 You can deploy this project on:
 
-- ▲ [**Live Preview**](https://vercel.com/) 
+- ▲ [**Live Preview**](https://quick-plue.vercel.app/) 
 
 
 
