@@ -20,7 +20,7 @@ type Props = {
   className?: string;
 };
 
-export default function EditTaskModal({ task,className }: Props) {
+export default function EditTaskModal({ task }: Props) {
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState(task.title);
   const [description, setDescription] = useState(task.description);
