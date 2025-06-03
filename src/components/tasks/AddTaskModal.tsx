@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Dialog,
@@ -7,28 +7,31 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { useState } from "react"
-import { useTaskStore } from "@/store/task-store"
-import { Plus } from "lucide-react"
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useId, useState } from "react";
+import { useTaskStore } from "@/store/task-store";
+import { Plus } from "lucide-react";
 
 export function AddTaskModal() {
-  const addTask = useTaskStore((state) => state.addTask)
-  const [title, setTitle] = useState("")
-  const [description, setDescription] = useState("")
-  const [dueDate, setDueDate] = useState("")
-
+  const addTask = useTaskStore((state) => state.addTask);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [dueDate, setDueDate] = useState("");
+  const titleId = useId();
+  const descriptionId = useId();
+  const dueDateId = useId();
+  const formId = useId();
   function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    if (!title) return
-    addTask(title, description, dueDate || undefined)
-    setTitle("")
-    setDescription("")
-    setDueDate("")
+    e.preventDefault();
+    if (!title) return;
+    addTask(title, description, dueDate || undefined);
+    setTitle("");
+    setDescription("");
+    setDueDate("");
   }
 
   return (
@@ -44,17 +47,23 @@ export function AddTaskModal() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-lg font-semibold">Add New Task</DialogTitle>
+          <DialogTitle className="text-lg font-semibold">
+            Add New Task
+          </DialogTitle>
           <DialogDescription className="text-sm text-muted-foreground">
             Fill in the details to create a new task.
           </DialogDescription>
         </DialogHeader>
 
-        <form onSubmit={handleSubmit} className="space-y-4 pt-2">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-4 pt-2"
+          id={formId}
+        >
           <div className="space-y-2">
-            <Label htmlFor="title">Title</Label>
+            <Label htmlFor={titleId}>Title</Label>
             <Input
-              id="title"
+              id={titleId}
               placeholder="e.g. Finish UI layout"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
@@ -63,9 +72,9 @@ export function AddTaskModal() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="description">Description</Label>
+            <Label htmlFor={descriptionId}>Description</Label>
             <Textarea
-              id="description"
+              id={descriptionId}
               placeholder="e.g. Include animations and responsive design"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
@@ -73,9 +82,9 @@ export function AddTaskModal() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="dueDate">Due Date</Label>
+            <Label htmlFor={dueDateId}>Due Date</Label>
             <Input
-              id="dueDate"
+              id={dueDateId}
               type="date"
               value={dueDate}
               onChange={(e) => setDueDate(e.target.value)}
@@ -88,5 +97,5 @@ export function AddTaskModal() {
         </form>
       </DialogContent>
     </Dialog>
-  )
+  );
 }

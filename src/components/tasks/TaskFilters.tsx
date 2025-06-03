@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   Select,
@@ -6,16 +6,17 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { TaskFilterType, SortOption } from "@/types/task";
-import { Label } from "@/components/ui/label";
-import { Filter, CalendarClock } from "lucide-react";
+} from "@/components/ui/select"
+import { TaskFilterType, SortOption } from "@/types/task"
+import { Label } from "@/components/ui/label"
+import { Filter, CalendarClock } from "lucide-react"
+import { useId } from "react"
 
 interface TaskFiltersProps {
-  filter: TaskFilterType;
-  setFilter: (value: TaskFilterType) => void;
-  sort: SortOption;
-  setSort: (value: SortOption) => void;
+  filter: TaskFilterType
+  setFilter: (value: TaskFilterType) => void
+  sort: SortOption
+  setSort: (value: SortOption) => void
 }
 
 export function TaskFilters({
@@ -24,16 +25,21 @@ export function TaskFilters({
   sort,
   setSort,
 }: TaskFiltersProps) {
+  const filterId = useId()
+  const sortId = useId()
+
   return (
     <div className="flex flex-col sm:flex-row gap-4 items-center justify-end mt-6 w-full">
-      {/* Filter Section */}
       <div className="flex items-center gap-2">
         <Filter className="w-4 h-4 text-muted-foreground" />
-        <Label htmlFor="status-filter">Filter</Label>
+        <Label htmlFor={filterId}>Filter</Label>
       </div>
 
-      <Select value={filter} onValueChange={(v) => setFilter(v as TaskFilterType)}>
-        <SelectTrigger className="w-full sm:w-[180px]">
+      <Select
+        defaultValue={filter}
+        onValueChange={(value) => setFilter(value as TaskFilterType)}
+      >
+        <SelectTrigger id={filterId} className="w-full sm:w-[180px]">
           <SelectValue placeholder="Filter by" />
         </SelectTrigger>
         <SelectContent>
@@ -44,14 +50,16 @@ export function TaskFilters({
         </SelectContent>
       </Select>
 
-      {/* Sort Section */}
       <div className="flex items-center gap-2">
         <CalendarClock className="w-4 h-4 text-muted-foreground" />
-        <Label htmlFor="sort-by">Sort By</Label>
+        <Label htmlFor={sortId}>Sort By</Label>
       </div>
 
-      <Select value={sort} onValueChange={(v) => setSort(v as SortOption)}>
-        <SelectTrigger className="w-full sm:w-[180px]">
+      <Select
+        defaultValue={sort}
+        onValueChange={(value) => setSort(value as SortOption)}
+      >
+        <SelectTrigger id={sortId} className="w-full sm:w-[180px]">
           <SelectValue placeholder="Sort by" />
         </SelectTrigger>
         <SelectContent>
@@ -60,5 +68,5 @@ export function TaskFilters({
         </SelectContent>
       </Select>
     </div>
-  );
+  )
 }
