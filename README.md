@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Management Project
 
-## Getting Started
+A simple and modern task management application built with React, Zustand, and TypeScript. This project allows users to create, update, delete, and organize tasks by their status and due dates. It supports filtering and sorting tasks to enhance productivity and task tracking.
 
-First, run the development server:
+---
 
-```bash
+## Features
+
+- Create, edit, and delete tasks.
+- Move tasks between statuses: `todo`, `in-progress`, and `done`.
+- Filter tasks by due date: today, this week, past due, or all.
+- Sort tasks by creation date or due date.
+- Responsive and accessible UI with animated interactions.
+- Toast notifications for user feedback on actions.
+- Modular and reusable React components.
+- Local state management with Zustand.
+- Date handling with `date-fns`.
+- Iconography with `lucide-react`.
+- Custom UI components for cards, badges, buttons, and modals.
+
+---
+
+## Technologies Used
+
+- **React 18** — Front-end library for building UI components.
+- **TypeScript** — Typed JavaScript for safer and scalable code.
+- **Zustand** — Lightweight state management library.
+- **date-fns** — Modern JavaScript date utility library.
+- **Sonner** — Toast notification library.
+- **Lucide React** — Open source icon library.
+- **Tailwind CSS** — Utility-first CSS framework for styling.
+- **shadcn/ui** — Component library based on Radix UI and Tailwind CSS.
+- **Next.js (optional)** — For server-side rendering and routing if used.
+
+---
+
+## Project Structure
+
+src/
+├── components/
+│ ├── TaskCard.tsx
+│ ├── TaskList.tsx
+│ ├── EditTaskModal.tsx
+│ └── ...
+├── store/
+│ └── task-store.ts
+├── types/
+│ └── task.ts
+├── pages/
+│ └── index.tsx
+└── utils/
+└── date-utils.ts
+
+
+- **components/** — Reusable React components for the UI.
+- **store/** — Zustand store for managing tasks state.
+- **types/** — TypeScript interfaces and types.
+- **pages/** — Application pages (if using Next.js).
+- **utils/** — Utility functions, e.g., date formatting.
+
+---
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/task-management-project.git
+   cd task-management-project
+   
+2.Install dependencies:
+npm install
+# or
+yarn install
+
+3.Run the development server:
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4.Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Future Improvements
 
-## Learn More
+Add user authentication.
 
-To learn more about Next.js, take a look at the following resources:
+Persist tasks in a backend or local storage.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add drag-and-drop support for reordering tasks.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Enhance accessibility features.
 
-## Deploy on Vercel
+Add dark mode toggle.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Improve mobile responsiveness.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## References
+React Documentation
+
+TypeScript
+
+Zustand
+
+date-fns
+
+Sonner Toast
+
+Lucide Icons
+
+Tailwind CSS
+
+shadcn/ui
+
+Author
+Ahmed Nawar
+
+
