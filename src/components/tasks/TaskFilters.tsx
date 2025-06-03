@@ -32,10 +32,7 @@ export function TaskFilters({
         <Label htmlFor="status-filter">Filter</Label>
       </div>
 
-      <Select
-        value={filter}
-        onValueChange={(value) => setFilter(value as TaskFilterType)}
-      >
+      <Select value={filter} onValueChange={(v) => setFilter(v as TaskFilterType)}>
         <SelectTrigger className="w-full sm:w-[180px]">
           <SelectValue placeholder="Filter by" />
         </SelectTrigger>
@@ -53,10 +50,7 @@ export function TaskFilters({
         <Label htmlFor="sort-by">Sort By</Label>
       </div>
 
-      <Select
-        value={sort}
-        onValueChange={(value) => setSort(value as SortOption)}
-      >
+      <Select value={sort} onValueChange={(v) => setSort(v as SortOption)}>
         <SelectTrigger className="w-full sm:w-[180px]">
           <SelectValue placeholder="Sort by" />
         </SelectTrigger>

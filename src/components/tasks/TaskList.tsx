@@ -28,9 +28,15 @@ export default function TaskList({
 
     // Sort
     if (sort === "createdAt") {
-      temp.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+      temp.sort((a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      );
     } else if (sort === "dueDate") {
-      temp.sort((a, b) => new Date(a.dueDate || 0).getTime() - new Date(b.dueDate || 0).getTime());
+      temp.sort((a, b) => {
+        const aDue = a.dueDate ? new Date(a.dueDate).getTime() : Number.MAX_SAFE_INTEGER;
+        const bDue = b.dueDate ? new Date(b.dueDate).getTime() : Number.MAX_SAFE_INTEGER;
+        return aDue - bDue;
+      });
     }
 
     return temp;
