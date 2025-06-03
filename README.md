@@ -34,6 +34,12 @@ A simple and modern task management application built with React, Zustand, and T
 
 ---
 
+## Deployment
+
+You can deploy this project easily on platforms such as:
+
+- **Vercel** (recommended for Next.js projects): [https://vercel.com/](https://vercel.com/)
+
 ## Project Structure
 
 src/
