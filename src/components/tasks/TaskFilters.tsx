@@ -8,7 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { TaskFilterType } from "@/types/task";
-import { SortOption } from "@/types/sort";
+import { SortOption } from "@/types/task";
 import { Label } from "@/components/ui/label";
 import { Filter, CalendarClock } from "lucide-react";
 
