@@ -35,6 +35,12 @@ Manage your tasks easily with filtering, sorting, and a clean UI.
 
 ---
 
+## 🚀 Deployment
+
+You can deploy this project on:
+
+- ▲ [**Live Preview**](https://quick-plue.vercel.app/) 
+
 ## 🖼️ Icons
 
 This project uses **Lucide React** icons for clarity and aesthetics:
@@ -73,15 +79,6 @@ src/
 - **utils/** — Utility functions, e.g., date formatting.
 
 ---
-
-
----
-
-## 🚀 Deployment
-
-You can deploy this project on:
-
-- ▲ [**Live Preview**](https://quick-plue.vercel.app/) 
 
 
 
