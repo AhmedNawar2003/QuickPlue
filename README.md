@@ -1,44 +1,52 @@
-# Task Management Project
+# ✅ Task Management Project
 
-A simple and modern task management application built with React, Zustand, and TypeScript. This project allows users to create, update, delete, and organize tasks by their status and due dates. It supports filtering and sorting tasks to enhance productivity and task tracking.
-
----
-
-## Features
-
-- Create, edit, and delete tasks.
-- Move tasks between statuses: `todo`, `in-progress`, and `done`.
-- Filter tasks by due date: today, this week, past due, or all.
-- Sort tasks by creation date or due date.
-- Responsive and accessible UI with animated interactions.
-- Toast notifications for user feedback on actions.
-- Modular and reusable React components.
-- Local state management with Zustand.
-- Date handling with `date-fns`.
-- Iconography with `lucide-react`.
-- Custom UI components for cards, badges, buttons, and modals.
+A simple and modern task management application built with React, Zustand, and TypeScript.  
+Manage your tasks easily with filtering, sorting, and a clean UI.
 
 ---
 
-## Technologies Used
+## ✨ Features
 
-- **React 18** — Front-end library for building UI components.
-- **TypeScript** — Typed JavaScript for safer and scalable code.
-- **Zustand** — Lightweight state management library.
-- **date-fns** — Modern JavaScript date utility library.
-- **Sonner** — Toast notification library.
-- **Lucide React** — Open source icon library.
-- **Tailwind CSS** — Utility-first CSS framework for styling.
-- **shadcn/ui** — Component library based on Radix UI and Tailwind CSS.
-- **Next.js (optional)** — For server-side rendering and routing if used.
+- 📝 Create, edit, and delete tasks
+- 🔁 Move tasks between: `todo`, `in-progress`, `done`
+- 📆 Filter by due date: today, this week, past
+- 🔽 Sort tasks by creation date or due date
+- 📱 Responsive and accessible UI
+- 🔔 Toast notifications with Sonner
+- ♻️ Reusable and modular components
+- ⚡ State management using Zustand
+- 📅 Date formatting via `date-fns`
+- 🎨 Icon support with Lucide
+- 🎯 Designed with Tailwind CSS + shadcn/ui
 
 ---
 
-## Deployment
+## 🧰 Technologies Used
 
-You can deploy this project easily on platforms such as:
+- ⚛️ **React 18**
+- 🟦 **TypeScript**
+- 🐻 **Zustand**
+- 📆 **date-fns**
+- 🔔 **Sonner**
+- 🧩 **Lucide React**
+- 💨 **Tailwind CSS**
+- 🧪 **shadcn/ui**
+- 🚀 **Next.js** (optional)
 
-- **Vercel** (recommended for Next.js projects): [https://vercel.com/](https://vercel.com/)
+---
+
+## 🖼️ Icons
+
+This project uses **Lucide React** icons for clarity and aesthetics:
+
+- 🗓️ `CalendarDays` – creation date  
+- ⏰ `Clock` – due date  
+- 🏷️ `Badge` – status indicators  
+
+🔗 [Lucide Icon Library](https://lucide.dev/)
+
+---
+
 
 ## Project Structure
 
@@ -66,41 +74,54 @@ src/
 
 ---
 
-## How to Run
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/task-management-project.git
-   cd task-management-project
-   
-2.Install dependencies:
+---
+
+## 🚀 Deployment
+
+You can deploy this project on:
+
+- ▲ [**Live Preview**](https://vercel.com/) 
+
+
+
+---
+
+## 🧪 How to Run Locally
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/yourusername/task-manager.git
+
+# 2. Install dependencies
 npm install
-# or
-yarn install
 
-3.Run the development server:
+# 3. Start dev server
 npm run dev
-# or
-yarn dev
 
-4.Open http://localhost:3000 in your browser.
+# 4. Open in browser
+http://localhost:3000
+````
 
 
-## Future Improvements
+🌱 Future Enhancements
 
-Add user authentication.
+🔒 Authentication support
 
-Persist tasks in a backend or local storage.
+☁️ Persistent storage (e.g., backend or localStorage)
 
-Add drag-and-drop support for reordering tasks.
+🧲 Drag-and-drop for task reordering
 
-Enhance accessibility features.
+🌓 Dark mode toggle
 
-Add dark mode toggle.
+📱 Mobile-first UI refinements
 
-Improve mobile responsiveness.
+✅ Checklists or subtasks
 
-## References
+
+
+📚 References
+
 React Documentation
 
 TypeScript
@@ -117,7 +138,7 @@ Tailwind CSS
 
 shadcn/ui
 
-Author
+👨‍💻 Author
 Ahmed Nawar
 
 
