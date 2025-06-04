@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from 'sonner';
 import { ThemeProvider } from "@/components/theme-provider";
+import AnimatedBackground from "@/components/AnimatedBackground";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,6 +19,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "QuickPulse",
   description: "Task Manager",
+  icons:{
+    icon:"/image/QuickPulse.jpg"
+  }
 };
 
 export default function RootLayout({
@@ -29,6 +34,8 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Toaster richColors position="top-right" />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeToggle />
+          <AnimatedBackground/>
           {children}
         </ThemeProvider>
       </body>

@@ -27,9 +27,9 @@ export function TaskTabs() {
 
       <Tabs defaultValue="todo" className="w-full">
         <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="todo">To Do</TabsTrigger>
-          <TabsTrigger value="in-progress">In Progress</TabsTrigger>
-          <TabsTrigger value="done">Done</TabsTrigger>
+          <TabsTrigger className="cursor-pointer" value="todo">To Do</TabsTrigger>
+          <TabsTrigger className="cursor-pointer" value="in-progress">In Progress</TabsTrigger>
+          <TabsTrigger className="cursor-pointer" value="done">Done</TabsTrigger>
         </TabsList>
 
         <TabsContent value="todo">
