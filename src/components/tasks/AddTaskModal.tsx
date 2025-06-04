@@ -64,7 +64,7 @@ export function AddTaskModal() {
             <Label htmlFor={titleId}>Title</Label>
             <Input
               id={titleId}
-              placeholder="e.g. Finish UI layout"
+              placeholder="Enter Your Task Name"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               required
@@ -75,7 +75,7 @@ export function AddTaskModal() {
             <Label htmlFor={descriptionId}>Description</Label>
             <Textarea
               id={descriptionId}
-              placeholder="e.g. Include animations and responsive design"
+              placeholder="Your Task Description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
